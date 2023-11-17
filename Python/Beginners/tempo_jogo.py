@@ -1,23 +1,14 @@
-# Caio Cesar 17/9/23
-# BEE 1047
-
+# Caio Cesar 12/11/23
+# BEE 1046
 
 entrada = input().split()
 
-hr1 = int(entrada[0])
-min1 = int(entrada[1])
-hr2 = int(entrada[2])
-min2 = int(entrada[3])
+hora_ini = int(entrada[0])
+hora_fim = int(entrada[1])
 
-tempo1 = (hr1*60) + min1
-tempo2 = (hr2*60) + min2
-
-tempo_total= tempo2 - tempo1
-
-if tempo_total <= 0:
-    tempo_total += 24*60
-    
-hrtotal = tempo_total // 60
-mintotal = tempo_total % 60
-    
-print(f'O JOGO DUROU {hrtotal} HORA(S) E {mintotal} MINUTO(S)')
+if hora_ini >= hora_fim:
+    tempo = 24 - hora_ini + hora_fim
+    print(f'O JOGO DUROU {tempo} HORA(S)')
+else:
+    tempo = hora_fim - hora_ini
+    print(f'O JOGO DUROU {tempo} HORA(S)')
